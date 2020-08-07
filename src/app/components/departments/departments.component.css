@@ -1,0 +1,19 @@
+.departments__sction {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 14px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    justify-content: space-between;
+
+}
+
+.departments__sction .department {
+    width: 300px;
+    max-width: 100%;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    height: 300px;
+    border: green 2px solid;
+}

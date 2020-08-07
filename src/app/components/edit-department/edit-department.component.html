@@ -1,0 +1,82 @@
+<div class="main__section">
+    <h3>Departments > Edit</h3>
+  <form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
+      <div class="department__info w-50 mx-auto my-5">
+      <h3>Department Info</h3>
+      <div class="form-group">
+        <label>Name: </label>
+        <input
+          class="form-control"
+          type="text"
+          name="name"
+          ngModel
+          [placeholder]="department.name"
+        />
+      </div>
+      <div class="form-group">
+        <label class="mt-4">API Key: </label>
+        <input
+          ngModel
+          class="form-control"
+          type="text"
+          name="apikey"
+          [placeholder]="department.apikey"
+        />
+      </div>
+
+      <div class="text-right">
+        <button class="btn-success border-0 p-3 px-5">
+          Add new Feild
+        </button>
+      </div>
+      <!-- </form> -->
+    </div>
+    <div class="department__info w-50 mx-auto">
+      <h3>Department Contact Person</h3>
+      <!-- <form> -->
+      <div>
+        <label>Name: </label>
+        <input
+          ngModel
+          class="form-control"
+          type="text"
+          name="contactName"
+          [placeholder]="department.contactName"
+        />
+        <label class="mt-4">Email: </label>
+        <input
+          ngModel
+          class="form-control"
+          type="email"
+          name="email"
+          [placeholder]="department.email"
+        />
+        <label class="mt-4">Telephone: </label>
+        <input
+          ngModel
+          class="form-control"
+          type="number"
+          name="telephone"
+          [placeholder]="department.telephone"
+        />
+      </div>
+      <div class="text-right">
+        <button class="btn-success border-0 p-3 px-5 mt-3">
+          Add new Feild
+        </button>
+      </div>
+    </div>
+    <div class="row w-50 mx-auto my-5">
+      <div class="col-md-4 pl-0">
+        <button (click)="navigate('')" class="w-100 btn-secondary p-3 border-0">
+          Cancel
+        </button>
+      </div>
+      <div class="col-md-8 pr-0">
+        <button type="submit" class="w-100 btn-success p-3 border-0">
+          Save
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

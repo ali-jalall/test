@@ -1,0 +1,21 @@
+<div class="departments__sction py-3">
+  <div class="department px-3 py-2" *ngFor="let department of departments; let i = index" [attr.data-index]="i">
+    <h4>{{ department.name }}</h4>
+    <div class="mx-auto" style="text-align: center; margin: 40px 0;">
+      <img
+        src="../../../assets/hospital.png"
+        alt="hospital_img"
+        width="140px"
+      />
+    </div>
+    <div class="btn-group" role="group">
+        <button id="btnGroupDrop1" type="button" class="btn btn-success border-0 rounded-0 btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Open
+        </button>
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+          <a (click)="editDepartment(i)" class="dropdown-item" >Edit</a>
+          <a (click)="deleteDepartment(i)" class="dropdown-item" href="#">Delete</a>
+        </div>
+      </div>
+  </div>
+</div>
